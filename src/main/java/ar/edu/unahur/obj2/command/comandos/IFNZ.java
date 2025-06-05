@@ -17,7 +17,7 @@ public class IFNZ extends OperacionSensilla{
     }
 
     @Override
-    public void executeEsp(Programable micro) {
+    public void doExecute(Programable micro) {
         micro.run(listaInstrucciones);
     }
     

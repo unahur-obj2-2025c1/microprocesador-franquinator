@@ -5,5 +5,5 @@ import ar.edu.unahur.obj2.command.Programable;
 public class NOP extends OperacionSensilla{
 
     @Override
-    public void executeEsp(Programable micro) {}
+    public void doExecute(Programable micro) {}
 }

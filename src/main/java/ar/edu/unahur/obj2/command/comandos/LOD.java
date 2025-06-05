@@ -8,7 +8,7 @@ public class LOD extends OperacionSensilla{
         this.addr = addr;
     }
     @Override
-    public void executeEsp(Programable micro){
+    public void doExecute(Programable micro){
         micro.setAcumuladorA(micro.getAddr(addr));
     }
 

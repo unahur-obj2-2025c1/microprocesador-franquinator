@@ -9,10 +9,10 @@ public abstract class OperacionSensilla implements Operable{
     public void execute(Programable micro) {
         microAnterior = micro.copy();
         micro.setUltimaOperacion(this);
-        executeEsp(micro);
+        doExecute(micro);
         micro.incProgramCounter();
     }
-    public abstract void executeEsp(Programable micro);
+    public abstract void doExecute(Programable micro);
     @Override
     public void undo(Programable micro) {
         micro.copyFrom(microAnterior);

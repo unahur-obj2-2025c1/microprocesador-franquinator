@@ -6,8 +6,8 @@ import ar.edu.unahur.obj2.command.comandos.Operable;
 import ar.edu.unahur.obj2.command.excepctions.MicroException;
 
 public class Microprocesador implements Programable{
-    private Integer acomuladorA;
-    private Integer acomuladorB;
+    private Integer acomuladorA = 0;
+    private Integer acomuladorB = 0;
     private Integer programCounter = 0;
     private Integer[] memory = new Integer[1024];
     private Operable ultimaOperacion;
@@ -63,8 +63,11 @@ public class Microprocesador implements Programable{
     }
     @Override
     public void reset() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'reset'");
+        acomuladorA = 0;
+        acomuladorB = 0;
+        programCounter = 0;
+        memory = new Integer[1024];
+        ultimaOperacion = null;
     }
     @Override
     public void setAddr(Integer addr) {
